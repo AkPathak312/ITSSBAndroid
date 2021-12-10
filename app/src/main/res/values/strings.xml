@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">WS Russia Android</string>
+    <string name="warranty">Warranty Date Range</string>
+    <string-array name="dept">
+        <item>Dept One</item>
+        <item>Dept Two</item>
+        <item>Dept Three</item>
+    </string-array>
+    <string-array name="asset">
+        <item>Asset One</item>
+        <item>Asset Two</item>
+        <item>Asset Three</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
