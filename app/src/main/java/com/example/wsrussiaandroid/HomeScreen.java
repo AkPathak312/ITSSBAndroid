@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +34,16 @@ public class HomeScreen extends Fragment {
         View view= inflater.inflate(R.layout.fragment_home_screen, container, false);
         listview=view.findViewById(R.id.listview);
         startDate=view.findViewById(R.id.edtStartDate);
+        view.findViewById(R.id.floatingButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment=new AddAsset();
+                FragmentTransaction transaction= getFragmentManager().beginTransaction();
+                transaction.replace(R.id.mainfragment,fragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
         startDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

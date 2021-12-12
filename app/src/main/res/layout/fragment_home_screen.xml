@@ -5,91 +5,106 @@
     android:layout_height="match_parent"
     tools:context=".HomeScreen">
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <Spinner
-                    android:entries="@array/dept"
-                    android:layout_width="0sp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:orientation="horizontal">
 
-                <Spinner
-                    android:entries="@array/asset"
-                    android:layout_width="0sp"
+                    <Spinner
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/dept" />
+
+                    <Spinner
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/asset" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_marginTop="20sp"
+                    android:text="@string/warranty"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5sp"
+                    android:background="#000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edtStartDate"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+                        android:focusable="false"
+                        android:hint=" Start Date"
+                        android:onClick="openDatePicker1" />
+
+                    <EditText
+                        android:id="@+id/edtEndDate"
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+                        android:focusable="false"
+                        android:hint=" End Date"
+                        android:onClick="openDatePicker2" />
+                </LinearLayout>
+
+                <SearchView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20sp"
+                    android:background="#08000000" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:text="Asset : "
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <ListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="500sp" />
             </LinearLayout>
-
-            <TextView
-                android:textColor="#000"
-                android:layout_marginTop="20sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/warranty"
-                android:textSize="18sp" />
-
-            <View
-                android:layout_marginTop="5sp"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#000" />
-
-            <LinearLayout
-                android:layout_marginTop="5sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/edtStartDate"
-                    android:focusable="false"
-                    android:layout_width="0sp"
-                    android:onClick="openDatePicker1"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:drawableStart="@drawable/ic_baseline_calendar_today_24"
-                    android:hint=" Start Date" />
-
-                <EditText
-                    android:id="@+id/edtEndDate"
-                    android:focusable="false"
-                    android:onClick="openDatePicker2"
-                    android:layout_width="0sp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:drawableStart="@drawable/ic_baseline_calendar_today_24"
-                    android:hint=" End Date" />
-            </LinearLayout>
-            <SearchView
-                android:layout_marginTop="20sp"
-                android:layout_width="match_parent"
-                android:background="#08000000"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:layout_marginTop="5sp"
-                android:layout_width="match_parent"
-                android:textColor="#000"
-                android:textSize="18sp"
-                android:layout_height="wrap_content"
-                android:text="Asset : "/>
-            <ListView
-                android:id="@+id/listview"
-                android:layout_width="match_parent"
-                android:layout_height="500sp"/>
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16sp"/>
+    </RelativeLayout>
 
 
 </FrameLayout>

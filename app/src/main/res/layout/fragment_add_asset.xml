@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context=".AddAsset">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+       <androidx.appcompat.widget.Toolbar
+           android:background="#C1000000"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <LinearLayout
+               android:layout_gravity="center"
+               android:gravity="center"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+               <TextView
+                   android:textColor="#fff"
+                   android:layout_weight="2"
+                   android:layout_width="0dp"
+                   android:textSize="22sp"
+                   android:layout_height="wrap_content"
+                   android:text="Asset Information"/>
+               <Button
+                   android:id="@+id/backButton"
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:background="#00000000"
+                   android:layout_height="wrap_content"
+                   android:textColor="#FFC107"
+                   android:text="Back"/>
+           </LinearLayout>
+       </androidx.appcompat.widget.Toolbar>
+       <EditText
+           android:layout_margin="5sp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Asset Name"/>
+       <LinearLayout
+           android:layout_margin="5sp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <Spinner
+               android:layout_width="0sp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:entries="@array/dept" />
+           <Spinner
+               android:layout_width="0sp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:entries="@array/asset" />
+       </LinearLayout>
+       <LinearLayout
+           android:layout_margin="5sp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <Spinner
+               android:layout_width="0sp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:entries="@array/dept" />
+
+           <Spinner
+               android:layout_width="0sp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:entries="@array/asset" />
+       </LinearLayout>
+       <EditText
+           android:layout_margin="5sp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:lines="3"
+           android:hint="Asset description\nMultiline"/>
+       <LinearLayout
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="5sp"
+           android:orientation="horizontal">
+
+           <EditText
+               android:id="@+id/edtStartDate"
+               android:layout_width="0sp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+               android:focusable="false"
+               android:hint=" Expired Warranty"/>
+
+           <TextView android:layout_margin="5sp"
+               android:layout_height="wrap_content"
+               android:textSize="18sp"
+               android:layout_width="0dp"
+               android:text="Asset S/N:"
+               android:layout_weight="1"/>
+       </LinearLayout>
+       <LinearLayout
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="5sp"
+           android:orientation="horizontal">
+
+           <Button
+               android:id="@+id/cameraButton"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_margin="10dp"
+               android:layout_height="wrap_content"
+               android:text="Capture Image"/>
+
+           <Button
+               android:id="@+id/browse"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_margin="10dp"
+               android:layout_height="wrap_content"
+               android:text="Browse"/>
+       </LinearLayout>
+       <ImageView
+           android:id="@+id/imageview"
+           android:layout_gravity="center"
+           android:layout_width="200sp"
+           android:layout_height="200sp"/>
+
+   </LinearLayout>
+</FrameLayout>
